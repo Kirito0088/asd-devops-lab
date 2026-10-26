@@ -36,7 +36,7 @@ jobs:
 
     - name: 6. Build & Package Artifact
       run: |
-        python -m zipapp . -o dist/app.pyz -m "app:main"
+        mkdir -p dist; python -m zipapp . -o dist/app.pyz -m "app:main"
         ls -la dist/
 
     - name: 7. Automated Deployment Stage
